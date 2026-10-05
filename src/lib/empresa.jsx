@@ -1,0 +1,2 @@
+import{useQuery,useQueryClient}from'@tanstack/react-query';import{callBackend}from'@/blink/backend';import{useAuth}from'@/lib/auth';
+export function useEmpresa(){const{user}=useAuth();const qc=useQueryClient();const q=useQuery({queryKey:['empresa',user?.id,sessionStorage.getItem('autoflow-empresa')],enabled:!!user,queryFn:()=>callBackend('/api/bootstrap')});return{...q,empresa:q.data?.tenant?.empresa||null,empresaId:q.data?.tenant?.empresaId||null,empresaUser:{role:q.data?.tenant?.role},refresh:()=>qc.invalidateQueries({queryKey:['empresa']})}}

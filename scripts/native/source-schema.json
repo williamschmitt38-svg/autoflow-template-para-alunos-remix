@@ -1,0 +1,670 @@
+{
+  "app_config": {
+    "app_name": {
+      "type": "string",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "super_admin_emails": {
+      "type": "Json",
+      "optional": true
+    },
+    "system_settings": {
+      "type": "Json",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "cliente": {
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "nome": {
+      "type": "string",
+      "optional": false
+    },
+    "observacoes": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_cliente\"]",
+      "optional": true
+    },
+    "tags": {
+      "type": "string[] | null",
+      "optional": true
+    },
+    "telefone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "empresa": {
+    "anos_mercado": {
+      "type": "number | null",
+      "optional": true
+    },
+    "ciclo": {
+      "type": "Database[\"public\"][\"Enums\"][\"ciclo_cobranca\"]",
+      "optional": true
+    },
+    "cnpj": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cor_primaria": {
+      "type": "string",
+      "optional": true
+    },
+    "cor_secundaria": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "data_inicio": {
+      "type": "string | null",
+      "optional": true
+    },
+    "email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "endereco": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "logo_url": {
+      "type": "string | null",
+      "optional": true
+    },
+    "nome": {
+      "type": "string",
+      "optional": false
+    },
+    "onboarding_concluido": {
+      "type": "boolean",
+      "optional": true
+    },
+    "owner_email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "owner_nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plano": {
+      "type": "Database[\"public\"][\"Enums\"][\"plano_empresa\"]",
+      "optional": true
+    },
+    "proximo_vencimento": {
+      "type": "string | null",
+      "optional": true
+    },
+    "slogan": {
+      "type": "string | null",
+      "optional": true
+    },
+    "slug": {
+      "type": "string | null",
+      "optional": true
+    },
+    "sobre": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_empresa\"]",
+      "optional": true
+    },
+    "status_cobranca": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_cobranca\"]",
+      "optional": true
+    },
+    "telefone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "trial_ate": {
+      "type": "string | null",
+      "optional": true
+    },
+    "ultimo_acesso_owner": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "valor": {
+      "type": "number | null",
+      "optional": true
+    },
+    "vitrine_ativa": {
+      "type": "boolean",
+      "optional": true
+    },
+    "whatsapp": {
+      "type": "string | null",
+      "optional": true
+    }
+  },
+  "empresa_user": {
+    "ativo": {
+      "type": "boolean",
+      "optional": true
+    },
+    "auth_user_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string",
+      "optional": false
+    },
+    "empresa_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "role": {
+      "type": "Database[\"public\"][\"Enums\"][\"empresa_user_role\"]",
+      "optional": true
+    },
+    "ultimo_login": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "horario_funcionamento": {
+    "abre": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "dia_semana": {
+      "type": "number",
+      "optional": false
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "fecha": {
+      "type": "string | null",
+      "optional": true
+    },
+    "fechado": {
+      "type": "boolean",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "lancamento": {
+    "categoria": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cliente_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "data": {
+      "type": "string | null",
+      "optional": true
+    },
+    "descricao": {
+      "type": "string",
+      "optional": false
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "forma": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "orcamento_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "os_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_lancamento\"]",
+      "optional": true
+    },
+    "tipo": {
+      "type": "Database[\"public\"][\"Enums\"][\"tipo_lancamento\"]",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "valor": {
+      "type": "number",
+      "optional": false
+    }
+  },
+  "orcamento": {
+    "cliente_id": {
+      "type": "string",
+      "optional": false
+    },
+    "cliente_nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "convertido_em_os": {
+      "type": "boolean",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "data": {
+      "type": "string | null",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "itens": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "numero": {
+      "type": "string | null",
+      "optional": true
+    },
+    "observacoes": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_orcamento\"]",
+      "optional": true
+    },
+    "total": {
+      "type": "number | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "validade": {
+      "type": "string | null",
+      "optional": true
+    },
+    "veiculo_desc": {
+      "type": "string | null",
+      "optional": true
+    },
+    "veiculo_id": {
+      "type": "string",
+      "optional": false
+    }
+  },
+  "ordem_servico": {
+    "cliente_id": {
+      "type": "string",
+      "optional": false
+    },
+    "cliente_nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "data_abertura": {
+      "type": "string | null",
+      "optional": true
+    },
+    "data_conclusao": {
+      "type": "string | null",
+      "optional": true
+    },
+    "data_prevista": {
+      "type": "string | null",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "itens": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "numero": {
+      "type": "string | null",
+      "optional": true
+    },
+    "orcamento_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "pagamento_status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_pagamento_os\"]",
+      "optional": true
+    },
+    "prioridade": {
+      "type": "Database[\"public\"][\"Enums\"][\"prioridade_os\"]",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"status_os\"]",
+      "optional": true
+    },
+    "tecnico": {
+      "type": "string | null",
+      "optional": true
+    },
+    "tecnico_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "total": {
+      "type": "number | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "veiculo_desc": {
+      "type": "string | null",
+      "optional": true
+    },
+    "veiculo_id": {
+      "type": "string",
+      "optional": false
+    }
+  },
+  "servico_referencia": {
+    "ativo": {
+      "type": "boolean",
+      "optional": true
+    },
+    "categoria": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "descricao": {
+      "type": "string | null",
+      "optional": true
+    },
+    "duracao_min": {
+      "type": "number | null",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "icone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "nome": {
+      "type": "string",
+      "optional": false
+    },
+    "ordem": {
+      "type": "number | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "valor_referencia": {
+      "type": "number | null",
+      "optional": true
+    }
+  },
+  "solicitacao": {
+    "cliente_email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cliente_nome": {
+      "type": "string",
+      "optional": false
+    },
+    "cliente_telefone": {
+      "type": "string",
+      "optional": false
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "data_agendada": {
+      "type": "string | null",
+      "optional": true
+    },
+    "descricao": {
+      "type": "string | null",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "hora_agendada": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "protocolo": {
+      "type": "string",
+      "optional": true
+    },
+    "servicos": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "status": {
+      "type": "string",
+      "optional": true
+    },
+    "tipo": {
+      "type": "string",
+      "optional": true
+    },
+    "veiculo_ano": {
+      "type": "number | null",
+      "optional": true
+    },
+    "veiculo_km": {
+      "type": "number | null",
+      "optional": true
+    },
+    "veiculo_marca": {
+      "type": "string | null",
+      "optional": true
+    },
+    "veiculo_modelo": {
+      "type": "string | null",
+      "optional": true
+    },
+    "veiculo_placa": {
+      "type": "string | null",
+      "optional": true
+    }
+  },
+  "user_roles": {
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "role": {
+      "type": "Database[\"public\"][\"Enums\"][\"app_role\"]",
+      "optional": false
+    },
+    "user_id": {
+      "type": "string",
+      "optional": false
+    }
+  },
+  "veiculo": {
+    "ano": {
+      "type": "number | null",
+      "optional": true
+    },
+    "cliente_id": {
+      "type": "string",
+      "optional": false
+    },
+    "cliente_nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cor": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "empresa_id": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "marca": {
+      "type": "string",
+      "optional": false
+    },
+    "modelo": {
+      "type": "string",
+      "optional": false
+    },
+    "placa": {
+      "type": "string",
+      "optional": false
+    },
+    "proxima_revisao": {
+      "type": "string | null",
+      "optional": true
+    },
+    "quilometragem": {
+      "type": "number | null",
+      "optional": true
+    },
+    "ultima_revisao": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  }
+}

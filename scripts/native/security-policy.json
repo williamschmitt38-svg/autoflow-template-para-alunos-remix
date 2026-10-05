@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "defaults": {
+    "require_auth": true
+  },
+  "modules": {
+    "db": {
+      "require_auth": true,
+      "raw_sql": {
+        "allowed": false
+      },
+      "row_level": {
+        "mode": "none",
+        "owner_field": "user_id"
+      },
+      "tables": {
+        "app_config": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "cliente": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "empresa": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "empresa_user": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "horario_funcionamento": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "lancamento": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "orcamento": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "ordem_servico": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "servico_referencia": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "solicitacao": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "user_roles": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "veiculo": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "profiles": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "template_owner": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "users": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "password_reset_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "magic_link_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "email_verification_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "blink_auth": {
+          "read": "deny",
+          "write": "deny"
+        }
+      }
+    }
+  }
+}
